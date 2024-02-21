@@ -142,17 +142,21 @@
     <section class="contact" id="contact">
         <h2 class="heading">Contacta a <span>InverNova!</span></h2>
 
-        <form id="contactForm">
+        <form id="contactForm", action="https://formsubmit.co/eduardodelarosa188@gmail.com" method="POST" >
             <div class="input-box">
-                <input type="text" id="fullName" placeholder="Full Name">
-                <input type="email" id="email" placeholder="Email Address">
+                <input type="text" id="fullName" name="Nombre completo" placeholder="Full Name">
+                <input type="email" id="email" name="Correo electronico" placeholder="Email Address">
             </div>
             <div class="input-box">
-                <input type="tel" id="mobileNumber" placeholder="Mobile Number">
-                <input type="text" id="emailSubject" placeholder="Email Subject">
+                <input type="tel" id="mobileNumber" name="Numero de Telefono" placeholder="Mobile Number">
+                <input type="text" id="emailSubject" name="Correo electronico confirmado" placeholder="Email Subject">
             </div>
-            <textarea id="message" name="message" cols="30" rows="10" placeholder="Your Message"></textarea>
+            <textarea id="message" name="Mensaje" cols="30" rows="10" placeholder="Your Message"></textarea>
             <input type="submit" value="Send Message" class="btn">
+
+            <input type="hidden" name="_next" value="http://127.0.0.1:5500">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_template" value="table">
         </form>
         
     </section>
