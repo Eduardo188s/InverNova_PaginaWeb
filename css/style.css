@@ -147,6 +147,8 @@ span {
     letter-spacing: .1rem;
     font-weight: 600;
     transition: .5s ease;
+    
+    
 }
 
 .btn:hover {
@@ -165,8 +167,10 @@ span {
 }
 
 .about-img img {
-    width: 30vw;
+    width: 40vw;
     justify-content:end;
+    animation: floatImage 4s ease-in-out infinite;
+    background-origin: 10;
 }
 
 .heading {
@@ -206,8 +210,8 @@ span {
 .services-container .services-box {
     flex: 1 1 30rem;
     background: var(--second-bg-color);
-    padding: 3rem 2rem 4rem;
-    border-radius: 2rem;
+    padding: 2rem 2rem 4rem;
+    border-radius: 3rem;
     text-align: center;
     border: .2rem solid var(--bg-color);
     transition: .5s ease;
@@ -215,11 +219,11 @@ span {
 
 .services-container .services-box:hover {
     border-color: var(--main-color);
-    transform: scale(1.02);
+    transform: scale(1.08);
 }
 
 .services-box i {
-    font-size: 7rem;
+    font-size: 5rem;
     color: var(--main-color);
 }
 
@@ -315,6 +319,9 @@ span {
 .contact h2 {
     margin-bottom: 3rem;
 }
+.contact {
+    background: var(--second-bg-color);
+}
 
 .contact form {
     max-width: 70rem;
@@ -335,7 +342,7 @@ span {
     padding: 1.5rem;
     font-size: 1.6rem;
     color: var(--text-color);
-    background: var(--second-bg-color);
+    background: var(--bg-color);
     border-radius: .8rem;
     margin: .7rem 0;
 }
@@ -360,11 +367,12 @@ span {
     align-items: center;
     flex-wrap: wrap;
     padding: 2rem 9%;
-    background: var(--second-bg-color);
+    background: black;
 }
 
 .footer-text p {
     font-size: 1.6rem;
+    color: var(--bg-color);
 }
 
 .footer-iconTop a {
@@ -500,4 +508,79 @@ span {
     text-align: center;
     margin-top: 2rem;
 }
+}
+
+@keyframes floatImage {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-2.4rem);
+    }
+    
+    100% {
+        transform: translateY(0);
+    }
+}
+
+
+
+.app-img img {
+    max-width: 100%;
+    margin-top: 50px;
+    float: left;
+    animation: floatImage 4s ease-in-out infinite;
+    background-origin: 10;
+}
+
+.app-container {
+    display: flex;
+    justify-content: space-between; /* Espaciado entre las cajas */
+    align-items: flex-start; /* Alineación al principio */
+    gap: 20px;
+    flex-wrap: wrap; /* Permitir envolver las cajas */
+    margin-top: 30px;
+}
+
+
+.app-box {
+    width: calc(50% - 20px); /* Ancho de las cajas ajustado para dos cajas en una fila */
+    background: var(--second-bg-color);
+    padding: 20px;
+    border-radius: 30px;
+    text-align: center;
+    border: 2px solid var(--bg-color);
+    transition: transform 0.5s ease;
+}
+
+.app-box:hover {
+    border-color: var(--main-color);
+    transform: scale(1.05);
+}
+
+.app-box i {
+    font-size: 5rem;
+    color: var(--main-color);
+}
+
+.app-box h3 {
+    font-size: 2.6rem;
+}
+
+.app-box p {
+    font-size: 1.6rem;
+    margin: 1rem 0 3rem;
+}
+
+/* Estilos responsivos */
+@media screen and (max-width: 768px) {
+    .app-img img {
+        float: none;
+        margin: 0 auto 20px;
+    }
+
+    .app-box {
+        width: calc(100% - 20px); /* Ancho completo en dispositivos más pequeños */
+    }
 }
