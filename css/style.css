@@ -526,7 +526,7 @@ span {
 
 
 
-/* .app-img img {
+.app-img img {
     max-width: 100%;
     margin-top: 50px;
     float: left;
@@ -583,4 +583,4 @@ span {
     .app-box {
         width: calc(100% - 20px); /* Ancho completo en dispositivos más pequeños */
     }
-} */
+}
